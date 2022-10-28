@@ -8,14 +8,14 @@ import java.awt.*;
 public class Fractale extends JPanel {
 
     double xmin = -2;
-    double xmax = 0.5;
-    double ymin = -1.25;
-    double ymax = 1.25;
+    double xmax = 2;
+    double ymin = -1.75;
+    double ymax = 1.75;
     int zoom = 100;
     int maxIterations = 50;
 
-    double largeur = 500;
-    double hauteur = 500;
+    double largeur = 1000;
+    double hauteur = 1000;
 
     // on calcule la taille de l'image :
 
@@ -40,11 +40,42 @@ public class Fractale extends JPanel {
 
             for (int y = 0; y < hauteur; y++) {
 
+                //Valeur de test
 
-                double cx = (x * (xmax - xmin) / largeur + xmin);
-                double cy = (y * (ymax - ymin) / hauteur + ymin);
+                double xn = (x * (xmax - xmin) / largeur + xmin);
+                double yn = (y * (ymin - ymax) / hauteur + ymax);
+                double cx = 0.285;
+                double cy = 0.01;
+
+
+
+
+                /*  Buddhabrot  XMIN, XMAX, YMIN, YMAX = -1.25, 1.25, -1.25, +1.25
+
+                double xn = (x * (xmax - xmin) / largeur + xmin);
+                double yn = (y * (ymin - ymax) / hauteur + ymax);
+                double cx = 0.285;
+                double cy = 0.01;
+
+                 */
+
+
+                /*  Connait pas le nom
+
+                double xn = (x * (xmax - xmin) / largeur + xmin);
+                double yn = (y * (ymin - ymax) / hauteur + ymax);
+                double cx = -0.2;
+                double cy = 0.7;
+
+                 */
+
+                // Mandelbrot  XMIN, XMAX, YMIN, YMAX = -2, +0.5, -1.25, +1.25
+
+                /*double cx = (x * (xmax - xmin) / largeur + xmin);
+                double cy = (y * (ymin - ymax) / hauteur + ymax);
                 double xn = 0;
-                double yn = 0;
+                double yn = 0;*/
+
                 int i = 0;
                 do {
                     double tmp_x = xn;
@@ -74,6 +105,8 @@ public class Fractale extends JPanel {
     }
 
     public Color getColor(double i) {
+
+        //if (i )
 
         return Color.BLACK;
 
