@@ -24,7 +24,7 @@ public class Window extends JFrame {
 
     public Window(String name, Fractale f){
         super(name);
-        this.setSize((int) image_x, (int) image_y);
+        this.setSize(1000, 1000);
         this.getContentPane().add(f);
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
