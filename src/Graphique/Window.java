@@ -2,6 +2,8 @@ package Graphique;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 
 public class Window extends JFrame {
 
@@ -28,8 +30,33 @@ public class Window extends JFrame {
         this.getContentPane().add(f);
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setResizable(false);
+        this.setResizable(true);
+        this.addComponentListener(new ComponentListener() {
 
+            //Redimenssionnement + re calcul de la fractale
+
+            @Override
+            public void componentResized(ComponentEvent e) {
+                f.largeur = getWidth();
+                f.hauteur = getHeight();
+                f.repaint();
+            }
+
+            @Override
+            public void componentMoved(ComponentEvent e) {
+
+            }
+
+            @Override
+            public void componentShown(ComponentEvent e) {
+
+            }
+
+            @Override
+            public void componentHidden(ComponentEvent e) {
+
+            }
+        });
 
     }
 
