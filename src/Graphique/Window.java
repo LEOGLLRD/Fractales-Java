@@ -24,9 +24,9 @@ public class Window extends JFrame {
         this.panel = panel;
     }
 
-    public Window(String name, Fractale f){
+    public Window(String name, FractaleAbstract f){
         super(name);
-        this.setSize(1000, 1000);
+        this.setSize(f.getWidth(), f.getHeight());
         this.getContentPane().add(f);
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
