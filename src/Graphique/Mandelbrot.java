@@ -7,8 +7,6 @@ import java.awt.event.*;
 
 public class Mandelbrot extends FractaleAbstract {
 
-    //XMIN, XMAX, YMIN, YMAX = -2, +0.5, -1.25, +1.25
-
     double xmin = -2;
     double xmax = 0.5;
     double ymin = -1.25;

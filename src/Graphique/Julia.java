@@ -18,32 +18,11 @@ public class Julia extends FractaleAbstract{
 
             for (int y = 0; y < hauteur; y++) {
 
-                //Valeur de test
-
                 double cx = 0.285;
                 double cy = 0.01 ;
                 double xn = convertXposToCx(x);
                 double yn = convertYposToCy(y);
 
-
-
-                /*  Ensemble de Julia
-
-                double cx = 0.285;
-                double cy = 0.01 ;
-                double xn = convertXposToCx(x);
-                double yn = convertYposToCy(y);
-
-                 */
-
-                // Mandelbrot  XMIN, XMAX, YMIN, YMAX = -2, +0.5, -1.25, +1.25
-
-                /*
-                double cx = convertXposToCx(x);
-                double cy = convertYposToCy(y);
-                double xn = 0;
-                double yn = 0;
-                */
 
                 int i = 0;
                 do {
